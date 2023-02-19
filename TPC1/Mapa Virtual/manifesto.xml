@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <meta>
+        <título>Gerador de Mapa Virtual</título>
+        <data>2023-02-19</data>
+        <autor>
+            <nome>Alexandre de Carvalho Flores</nome>
+            <id>PG50165</id>
+            <gitlink>https://github.com/SugaryLump/RPCW-TPC</gitlink>
+        </autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </meta>
+    <resumo>
+        <p> Gerador de HTML de um Mapa Virtual a partir de um ficheiro de dados json </p>
+    </resumo>
+    <resultados>
+        <resultado path=geraHTML.py>Script de geração do HTML</resultado>
+        <resultado path=mapa.html>HTML resultante</resultado>
+    </resultados>
+</manifesto>

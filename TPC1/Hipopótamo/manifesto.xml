@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <meta>
+        <título>Gerador de Mapa Virtual</título>
+        <data>2023-02-19</data>
+        <autor>
+            <nome>Alexandre de Carvalho Flores</nome>
+            <id>PG50165</id>
+            <gitlink>https://github.com/SugaryLump/RPCW-TPC</gitlink>
+        </autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </meta>
+    <resumo>
+        <p>Página web básica sobre hipopótamos em HTML</p>
+    </resumo>
+    <resultados>
+        <resultado path="hipopotamo.html">Ficheiro HTML da página</resultado>
+    </resultados>
+</manifesto>
