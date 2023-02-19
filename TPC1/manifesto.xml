@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <meta>
+        <título>TPC1</título>
+        <data>2023-02-19</data>
+        <autor>
+            <nome>Alexandre de Carvalho Flores</nome>
+            <id>PG50165</id>
+            <gitlink>https://github.com/SugaryLump/RPCW-TPC</gitlink>
+        </autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </meta>
+    <resumo>
+        <p>
+            Resolução do TPC1, que consistiu na criação de um script de
+            geração de HTML em python para criar um Mapa Virtual e na 
+            criação de uma página web básica em HTML sobre hipopótamos
+        </p>
+    </resumo>
+    <resultados>
+        <resultado path="Mapa Virtual/manifesto.xml">Manifesto para gerador de HTML do Mapa Virtual</resultado>
+        <resultado path="Hipopótamo/manifesto.xml">Manifesto para HTML da letra 'H'</resultado>
+    </resultados>
+</manifesto>
