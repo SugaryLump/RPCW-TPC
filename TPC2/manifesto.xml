@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <meta>
+        <título>File System Web Page</título>
+        <data>2023-02-20</data>
+        <autor>
+            <nome>Alexandre de Carvalho Flores</nome>
+            <id>PG50165</id>
+            <gitlink>https://github.com/SugaryLump/RPCW-TPC</gitlink>
+        </autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </meta>
+    <resumo>
+        <p>Página web básica de consulta de ficheiros XML, com gerador de índice e html em python.</p>
+    </resumo>
+    <resultados>
+        <resultado path="xmltohtml.py">Script de geração do index.html e dos html correspondentes a cada XML em python.</resultado>
+        <resultado path="filesystem.js">Código javascript para criação do servidor filesystem.</resultado>
+    </resultados>
+</manifesto>
