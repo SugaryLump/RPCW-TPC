@@ -61,12 +61,12 @@ for c in cities.values():
     if c['id'] in links:
         for l in links[c['id']]:
             html.write(f'{cities[l["destino"]]["nome"]} ({l["distância"]}m); ')
-        html.write(f"""
-                        <address>[<a href="#indice">Voltar ao índice</a>]</address>
-                        <center>
-                            <hr width="80%">
-                        </center>
-                        </a>""")
+    html.write(f"""
+                    <address>[<a href="#indice">Voltar ao índice</a>]</address>
+                    <center>
+                        <hr width="80%">
+                    </center>
+                    </a>""")
 
 html.write("""
                 </td>
