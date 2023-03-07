@@ -1,0 +1,110 @@
+:root {
+    --gunmetal-1: #192428;
+    --gunmetal-2: #162F31;
+    --gunmetal-3: #313B3D;
+    --midnight-green-1: #153536;
+    --midnight-green-2: #133A3A;
+    --brunswick-green: #0D504C;
+    --pine-green: #007C70;
+
+    --platinum: #E3E4E5;
+}
+
+html, body {
+    display: flex;
+    flex-direction: row;
+
+    height:100%;
+    width:100%;
+    margin:0px;
+    padding:0px;
+
+    font-family:Verdana,sans-serif;
+    background-color: var(--gunmetal-1);
+    color: var(--platinum);
+}
+
+a, a:visited {
+    text-decoration: none;
+    color:inherit;
+
+    font-family:"Segoe UI",Arial;
+}
+
+hr {
+    border-top: 1px solid var(--platinum);
+    border-radius: 5px;
+}
+
+.vr {
+    border-right: 1px solid var(--platinum);
+    border-radius: 5px;
+}
+
+table {
+    box-shadow:0 2px 5px rgba(0,0,0,0.4);
+    border: 1px solid var(--midnight-green-2);
+    border-spacing: 0;
+    border-radius: 10px;
+    padding-bottom:10px;
+    padding-top:10px
+}
+
+table, th, td {
+    text-align: left;
+}
+
+td {
+    padding: 0.75% 1%;
+    margin: 0px;
+}
+
+tr {
+    transition: 0.3s;
+}
+
+tr:nth-child(even) {
+    background-color: var(--gunmetal-3);
+}
+
+tr:hover {
+    background-color: var(--midnight-green-1);
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    margin: 1%;
+    
+    border: 2px solid var(--pine-green);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    background-color: var(--gunmetal-2);
+}
+
+.task-pending {
+    flex: 6;
+    margin: 1% 0%;
+
+    border: 2px solid var(--pine-green);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    background-color: var(--gunmetal-2)
+}
+
+.task-done {
+    flex: 3;
+    margin: 1%;
+
+    border: 2px solid var(--pine-green);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    background-color: var(--gunmetal-2)
+}
+
+.debug {
+    border-style: solid!important;
+    border-width: 1px!important;
+    background-color: lightcoral!important;
+}
