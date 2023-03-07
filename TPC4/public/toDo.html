@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="my.css"/>
+    <title>To Do</title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="my.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<div class="task-form">
-    <form>
-        <input/>
-    </form>
+<div id="task-form-container">
+${taskFormString}
 </div>
 
-<div class="task-pending">
-
+<div id="task-pending">
+    <div class="task-card">
+        <form class="task-card-button-row">
+            <i class="fas fa-check icon-button green-hover"></i>
+            <i class="fa fa-file icon-button yellow-hover"></i>
+            <i class="fas fa-times icon-button red-hover"></i>
+        </form>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="task-card-field-row">
+            <p><b>Alex</b></p>
+            <p><b>2023-03-2</b></p>
+        </div>
+    </div>
 </div>
 
-<div class="task-done">
-
+<div id="task-done">
+    <div class="task-card-done">
+        <p>Lorem ipsum dolo est laborum.</p>
+        <div class="task-card-field-row">
+            <p><b>Alex</b></p>
+            <p><b>2023-03-2</b></p>
+        </div>
+    </div>
 </div>
 
 </body>

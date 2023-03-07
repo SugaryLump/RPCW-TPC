@@ -11,9 +11,12 @@ http.createServer((req, res) => {
     if (static.isStaticResource(req)) {
         serve.staticResource(req, res)
     }
-    switch (req.method) {
-        default: {
-            serve.mainPage(res, tasks)
+    else {
+        console.log(`Method is ${req.method}`)
+        switch (req.method) {
+            default: {
+                serve.mainPage(res, tasks)
+            }
         }
     }
 }).listen(port)
