@@ -16,12 +16,12 @@ exports.mainPage = (res, tasks) => {
         class="text-block input"
         id="text-form-description">
     </div>
-    <input type="hidden" id="description-hidden" name="description">
+    <input type="hidden" name="description">
     <div id="task-form-field-row">
         <input class="input" placeholder="Assigned To" name="assigned">
         <input class="input" type=date placeholder="Due Date" name="date">
     </div>
-    <button type="submit" onclick="getDivValue()">Add</button>
+    <button class="add-button" type="submit" onclick="getDivValue()">Add</button>
     <script>
         function getDivValue() {
             document.getElementById("description-hidden").value = document.getElementById("text-form-description").innerHTML;
@@ -29,6 +29,7 @@ exports.mainPage = (res, tasks) => {
         }
     </script>
 </form>`
+            //var pendingTasksString = `<form id="task-form`
             console.log("Serving toDo.html")
             res.writeHead(200, {"Content-Type": 'text/html charset=utf-8'})
             res.end(eval('`' + data + '`'))

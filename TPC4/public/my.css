@@ -168,7 +168,13 @@ tr:hover {
     font-size:10px;
 }
 
-button {
+.icon-button {
+    background-color: inherit;
+    color: var(--platinum);
+    border: none;
+}
+
+.add-button {
     background-color: var(--brunswick-green);
     color:inherit;
     border: none;
@@ -180,14 +186,14 @@ button {
     box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 }
 
-button:hover {
+.add-button:hover {
     transition:0.1s;
     background-color:var(--pine-green);
     box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
     cursor:pointer;
 }
 
-button:active {
+.add-button:active {
     transition:0s;
     background-color:var(--midnight-green-2);
 }

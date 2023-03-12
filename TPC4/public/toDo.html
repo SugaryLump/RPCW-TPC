@@ -14,11 +14,19 @@ ${taskFormString}
 
 <div id="task-pending">
     <div class="task-card">
-        <form class="task-card-button-row">
-            <i class="fas fa-check icon-button green-hover"></i>
-            <i class="fa fa-file icon-button yellow-hover"></i>
-            <i class="fas fa-times icon-button red-hover"></i>
-        </form>
+        <div class="task-card-button-row">
+            <form method="put">
+                <input type="hidden" name="_method" value="PUT">
+                <input type="hidden" name="id" value="{id}">
+                <button class="icon-button" type="submit"><i class="fas fa-check icon-button green-hover"></i></button>
+            </form>
+            <a href="/{id}"><i class="fa fa-file icon-button yellow-hover"></i></a>
+            <form method="delete">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="id" value="{id}">
+                <button class="icon-button" type="submit"><i class="fas fa-times icon-button red-hover"></i></i></button>
+            </form>
+        </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <div class="task-card-field-row">
             <p><b>Alex</b></p>
