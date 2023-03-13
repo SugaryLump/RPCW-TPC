@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <meta>
+        <título>To Do Web App</título>
+        <data>2023-02-20</data>
+        <autor>
+            <nome>Alexandre de Carvalho Flores</nome>
+            <id>PG50165</id>
+            <gitlink>https://github.com/SugaryLump/RPCW-TPC</gitlink>
+        </autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </meta>
+    <resumo>
+        <p>SAP de to-do list com feita em JS, com CSS personalizado.</p>
+    </resumo>
+    <resultados>
+        <resultado path="toDo.js">Ficheiro javascript principal do servidor</resultado>
+        <resultado path="serve.js">Ficheiro javascript responsável pela geração do HTML dinâmico</resultado>
+        <resultado path="my.css">CSS da página web</resultado>
+        <resultado path="toDo.html">Esqueleto HTML da web app</resultado>
+    </resultados>
+</manifesto>

@@ -15,7 +15,7 @@
 
 html, body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     height:100%;
     width:100%;
@@ -25,6 +25,25 @@ html, body {
     font-family:Verdana,sans-serif;
     background-color: var(--gunmetal-1);
     color: var(--platinum);
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+
+    height:100%;
+    width:100%;
+    margin:0px;
+    padding:0px;
+}
+
+hr {
+    width:95%;
+}
+
+footer {
+    padding: 0% 2.5% 1% 2.5%;
+    font-size: small;
 }
 
 a, a:visited {
@@ -134,17 +153,17 @@ tr:hover {
 }
 
 .text-block {
-    overflow-x: hidden;
+    overflow-x:hidden;
     overflow-y: auto;
-    resize: vertical;
+    text-overflow:ellipsis;
+    resize: none;
     min-height:160px;
     max-height:700px;
     line-height:20px;
-    resize: none;
 }
 
 #text-form-description {
-    margin-bottom:5%
+    margin-bottom:5%;
 }
 
 #task-form {
@@ -174,8 +193,16 @@ tr:hover {
     border: none;
 }
 
+#edit-button-row {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:1%;
+}
+
 .add-button {
     background-color: var(--brunswick-green);
+    flex:1;
     color:inherit;
     border: none;
     border-radius: 10px;
@@ -183,6 +210,7 @@ tr:hover {
     margin: 0 10%;
     font-weight:500;
     font-size:large;
+    text-align: center;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 }
 
@@ -247,7 +275,9 @@ tr:hover {
     box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
 }
 
-
+p {
+    word-wrap: break-word;
+}
 
 .debug {
     border-style: solid!important;
