@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    title To Do
+    link(rel='stylesheet', href='/stylesheets/my.css')
+    script(src='/javascripts/getDivValue.js')
+    script(src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous')
+    meta(charset='utf-8')
+  body
+    #wrapper
+      #task-form-container
+        block task-form
+      #task-pending
+        each task in tasks
+          if task.completed === 'false'
+            .task-card
+              .task-card-button-row
+                form(method='get')
+                  input(type='hidden' name='_method' value='COMPLETE')
+                  input(type='hidden' name='id' value=task.id)
+                  button.icon-button(type='submit')
+                    i.fas.fa-check.icon-button.green-hover
+                a(href='/' + task.id)
+                  i.fa.fa-file.icon-button.yellow-hover 
+                form(method='get')
+                  input(type='hidden' name="_method" value='DELETE')
+                  input(type='hidden' name='id' value=task.id)
+                  button.icon-button(type='submit')
+                    i.fas.fa-times.icon-button.red-hover 
+              p= task.description
+              .task-card-field-row
+                p
+                  b= task.assigned
+                p
+                  b= task.date
+      #task-done
+        each task in tasks
+          if task.completed === 'true'
+            .task-card
+              .task-card-button-row
+                form(method='get')
+                  input(type='hidden' name='_method' value='UNDO')
+                  input(type='hidden' name='id' value=task.id)
+                  button.icon-button(type='submit')
+                    i.fas.fa-undo.icon-button.green-hover
+                a(href='/' + task.id)
+                  i.fa.fa-file.icon-button.yellow-hover 
+                form(method='get')
+                  input(type='hidden' name="_method" value='DELETE')
+                  input(type='hidden' name='id' value=task.id)
+                  button.icon-button(type='submit')
+                    i.fas.fa-times.icon-button.red-hover 
+              p= task.description
+              .task-card-field-row
+                p
+                  b= task.assigned
+                p
+                  b= task.date
+    hr
+    footer#footer Made by #[a(href='https://github.com/SugaryLump/RPCW-TPC') #[b Alexandre Flores, PG50165]] for a #[b Representation and Processing of Knowledge on Web course.]

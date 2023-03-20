@@ -109,12 +109,11 @@ http.createServer((req, res) => {
                             axios.put(dbURL + `/${parsedURL.query.id}`, task)
                             .then(axiosPutRes => {
                                 console.log(`Undid task ${parsedURL.query.id}`)
-                                axios.get(dbURL)
                                 res.writeHead(302, {'Location':'/'})
                                 res.end()
                             })
                             .catch(axiosPutErr => {
-                                console.log(`Axios DELETE error: ${axiosPutErr}`)
+                                console.log(`Axios UNDO error: ${axiosPutErr}`)
                             })
                             break
                         }
