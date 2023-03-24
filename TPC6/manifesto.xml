@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <meta>
+        <título>To Do Web App</título>
+        <data>2023-02-27</data>
+        <autor>
+            <nome>Alexandre de Carvalho Flores</nome>
+            <id>PG50165</id>
+            <gitlink>https://github.com/SugaryLump/RPCW-TPC</gitlink>
+        </autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </meta>
+    <resumo>
+        <p>Adaptação do TPC5 a MongoDB</p>
+    </resumo>
+    <resultados>
+        <resultado path="app.js">Ficheiro javascript principal do servidor</resultado>
+    </resultados>
+</manifesto>

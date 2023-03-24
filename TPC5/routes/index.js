@@ -5,21 +5,6 @@ var url = require('url')
 
 var dbURL = "http://localhost:3000/tasks"
 
-function collectRequestBodyData(request, callback) {
-  if(request.headers['content-type'] === 'application/x-www-form-urlencoded') {
-      let body = '';
-      request.on('data', chunk => {
-          body += chunk.toString();
-      });
-      request.on('end', () => {
-          callback(parse(body));
-      });
-  }
-  else {
-      callback(null);
-  }
-}
-
 /* GET home page. */
 router.get('/:taskID?', function(req, res, next) {
   var parsedURL = url.parse(req.url, true)
@@ -89,35 +74,34 @@ router.get('/:taskID?', function(req, res, next) {
   })
 })
 
-router.post('/taskID?', function(req, res, next) {
-  axios.get(dbURL)
-  .then(axiosRes => {
-      collectRequestBodyData(req, task => {
-          if (parseInt(parsedURL.pathname.slice(1)) != NaN && parseInt(parsedURL.pathname.slice(1)) <= axiosRes.data.length) {
-              axios.put(dbURL + `/${parseInt(parsedURL.pathname.slice(1))}`, task)
-              .then(axiosPutRes => {
-                  console.log("Put response: " + axiosPutRes.status)
-              })
-              .catch(axiosPutErr => {
-                  console.log(`Axios PUT error: ${axiosPutErr}`)
-              })
-          }
-          else {
-              axios.post(dbURL, task, {headers: {'Content-Type': 'application/json'}})
-              .then(axiosPostRes => {
-                  console.log("Post response: " + axiosPostRes.status)
-              })
-              .catch(axiosPostErr => {
-                  console.log(`Axios POST error: ${axiosPostErr}`)
-              })
-          }
-      })
-  })
-  .catch(axiosErr => {
-      console.log(`Axios error: ${axiosErr}`)
-  })
-  res.writeHead(302, {'Location':'/'})
-  res.end()
+router.post('/:taskID?', function(req, res, next) {
+    task = req.body
+    axios.get(dbURL)
+    .then(axiosRes => {
+        if (req.params.taskID != undefined && parseInt(req.params.taskID) <= axiosRes.data.length) {
+            axios.put(dbURL + `/${parseInt(req.params.taskID)}`, task)
+            .then(axiosPutRes => {
+                console.log("Put response: " + axiosPutRes.status)
+            })
+            .catch(axiosPutErr => {
+                console.log(`Axios PUT error: ${axiosPutErr}`)
+            })
+        }
+        else {
+            axios.post(dbURL, task, {headers: {'Content-Type': 'application/json'}})
+            .then(axiosPostRes => {
+                console.log("Post response: " + axiosPostRes.status)
+            })
+            .catch(axiosPostErr => {
+                console.log(`Axios POST error: ${axiosPostErr}`)
+            })
+        }
+        res.writeHead(302, {'Location':'/'})
+        res.end()
+    })
+    .catch(axiosErr => {
+        console.log(`Axios error: ${axiosErr}`)
+    })
 })
 
 module.exports = router;

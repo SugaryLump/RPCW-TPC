@@ -1,0 +1,12 @@
+extends layout
+
+block task-form
+  form#task-form(method='post')
+    p.small-text Description
+    div#text-form-description.text-block.input(contenteditable)
+    input#description-hidden(type='hidden' name='description')
+    input(type='hidden' name='completed' value='false')
+    #task-form-field-row
+      input.input(placeholder="Assigned To" name='assigned')
+      input.input(type='date' placeholder='Due Date' name='date')
+    button.add-button(type='submit' onclick='getDivValue()') Add
